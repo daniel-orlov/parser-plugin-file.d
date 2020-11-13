@@ -2,6 +2,7 @@ package parser_plugin_file_d
 
 import (
 	"github.com/ozonru/file.d/fd"
+	"github.com/ozonru/file.d/logger"
 	"github.com/ozonru/file.d/pipeline"
 )
 
@@ -32,5 +33,6 @@ func (p *Plugin) Stop() {
 }
 
 func (p *Plugin) Do(_ *pipeline.Event) pipeline.ActionResult {
+	logger.Infof("THIS FUCKING WORKS!")
 	return pipeline.ActionDiscard //currently just discards every action it encounters
 }
